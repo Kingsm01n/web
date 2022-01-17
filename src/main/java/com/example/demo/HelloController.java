@@ -6,8 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HelloController {
 
-    @GetMapping("/")
-    public String hello() {
-        return "hello";
+    @GetMapping("/1")
+    public String hello1() {
+        return "1";
+    }
+    @GetMapping("/2")
+    public String hello2() {
+        return "2";
     }
 }
