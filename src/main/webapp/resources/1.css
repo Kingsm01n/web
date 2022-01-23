@@ -7,7 +7,7 @@ body {
 .grid {
     counter-reset: index;
     display: grid;
-    grid-auto-rows: minmax(50px, 1fr);
+    /*grid-auto-rows: minmax(50px, 1fr);*/
     grid-template-columns: 1fr fit-content(50%) 1fr;
     grid-template-areas:
     "top top top"

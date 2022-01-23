@@ -56,3 +56,4 @@ function blur() {
     window.localStorage.setItem("blur", blur)
     document.getElementById("block-2").style.background = blur;
 }
+

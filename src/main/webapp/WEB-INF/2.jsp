@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="../resources/1.css"/>
 
 <div class="grid">
-    <div class="block-1">
+    <div id="block-1" class="block-1">
         <span id="x" class="text-x">text x</span>
     </div>
     <div id="block-2" class="block-2"></div>
-    <div class="block-3">
+    <div id="block-3" class="block-3">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum ducimus harum consequuntur, accusantium
         exercitationem quo voluptatem, error, a vero maxime quisquam aut voluptatibus autem tempora beatae corrupti
         dignissimos saepe voluptate! Impedit maxime perspiciatis minima rerum animi. Consequatur, nesciunt accusamus
@@ -23,9 +23,9 @@
         atque ipsa labore quisquam optio cumque.
         <input id="square-result" type="text" hidden/>
     </div>
-    <div class="block-4"></div>
-    <div class="block-5"></div>
-    <div class="block-6">
+    <div id="block-4" class="block-4"></div>
+    <div id="block-5" class="block-5"></div>
+    <div id="block-6"class="block-6">
         <span id="y" class="text-y">text y</span>
     </div>
 </div>
@@ -33,7 +33,7 @@
 <input type="button" value="Swap x and y" onclick="swap()"/><br/>
 <input type="button" value="Show/hide res of Square" onclick="showSquare()"/><br/>
 <input type="button" value="Count max nums" onclick="maxCount()"/><br/>
-<label for="blur">Blur event </label><input id="blur" type="text" onblur="var blur = document.getElementById('blur').value;window.localStorage.setItem('blur', blur);document.getElementById('block-2').style.background = blur;"/><br/>
-
+<label for="blur">Blur event </label>
+<input id="blur" type="text" onblur="var blur = document.getElementById('blur').value;window.localStorage.setItem('blur', blur);document.getElementById('block-2').style.background = blur;"/><br/>
 
 <script src="../resources/2.js" onload="squareAndMes()"></script>
