@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../resources/1.css"/>
+<link rel="stylesheet" href="../resources/2.css"/>
 
 <div class="grid">
     <div id="block-1" class="block-1">

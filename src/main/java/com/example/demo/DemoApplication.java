@@ -29,11 +29,16 @@ public class DemoApplication {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedHeaders("*")
+                        .allowedOriginPatterns("*")
+                        .allowCredentials(true)
                         .allowedMethods("*")
                         .allowCredentials(true)
                         .allowedOrigins(
-                                "http:/localhost",
-                                "http:/localhost:8080",
+                                "localhost",
+                                "http://localhost",
+                                "localhost:8080",
+                                "http://localhost:8080",
+                                "demo.herokuapp.com",
                                 "https://demo.herokuapp.com");
             }
         };

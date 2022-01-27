@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.grid {
+    counter-reset: index;
+    display: grid;
+    /*grid-auto-rows: minmax(50px, 1fr);*/
+    grid-template-columns: 1fr fit-content(50%) 1fr;
+    grid-template-areas:
+    "top top top"
+    "a main d"
+    "b main d"
+    "c c d"
+}
+
+.grid > div {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.grid > div:before {
+    content: counter(index);
+    counter-increment: index;
+    display: flex;
+}
+
+.inner-block {
+    display: block;
+}
+
+.block-1, .block-6 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: top;
+    background-color: blue;
+}
+
+span:is(.text-x, .text-y) {
+    display: inline-block;
+    padding: 10px;
+    background-color: white;
+    min-width: 100px;
+}
+
+.text-y {
+    text-align: right;
+}
+
+.block-2 {
+    grid-area: a;
+    background-color: red;
+}
+
+.block-3 {
+    grid-area: main;
+    background-color: white;
+}
+
+.block-4 {
+    grid-area: d;
+    background-color: red;
+    display: flex;
+
+}
+
+.block-5 {
+    grid-area: b;
+    background-color: green;
+}
+
+.block-6 {
+    flex-direction: row-reverse;
+    grid-area: c;
+    background-color: blue;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
